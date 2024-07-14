@@ -16,7 +16,7 @@ const Navbar = () => {
     <div className='gap-3 flex flex-col py-4 z-50'>
     <h1 className=' flex text-6xl font-heading font-bold justify-center items-center text-customyellow tracking-wider z-50 underline' >FIT-NOTE</h1>
     <h3 className=' flex text-4xl font-body font-bold justify-center items-center tracking-wide text-white z-50 md:text-3xl sm:text-2xl sm:text-center'  data-aos="fade-down"
-      data-aos-anchor-placement="center-center">START TRACKING TRANSFORMATION TODAY!</h3>
+      data-aos-anchor-placement="center-center">START TRACKING YOUR TRANSFORMATION TODAY!</h3>
     </div>
     </>
   )
