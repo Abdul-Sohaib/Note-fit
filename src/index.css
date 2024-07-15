@@ -20,7 +20,7 @@
     background-repeat: no-repeat;
     overflow: hidden;
     image-rendering: optimizeQuality;
-   background-image: url(./assets/page2.webp);
+   background-image: url(./Page2.webp);
 }
 .main2{
   height: auto;
@@ -35,7 +35,7 @@
   background-repeat: no-repeat;
   overflow: hidden;
   image-rendering: optimizeQuality;
- background-image: url(./assets/page1.webp);
+ background-image: url(./Page1.webp);
 }
 .mainstats{
   display: flex;
