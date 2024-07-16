@@ -20,8 +20,8 @@
     background-repeat: no-repeat;
     overflow: hidden;
     image-rendering: optimizeQuality;
-   /* background-image: url(/public/Page2.webp); */
-   background-color: black;
+   background-image: url(/dist/assets/Page2.webp);
+   /* background-color: black; */
 }
 .main2{
   height: auto;
@@ -36,8 +36,8 @@
   background-repeat: no-repeat;
   overflow: hidden;
   image-rendering: optimizeQuality;
-  background-color: black;
- /* background-image: url(/public/Page1.webp); */
+  /* background-color: black; */
+ background-image: url(/dist/assets/Page1.webp);
 }
 .mainstats{
   display: flex;
