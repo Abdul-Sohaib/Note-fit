@@ -32,12 +32,20 @@
   padding: 0;
   position: relative;
   padding-top: 10vh;
+  /* background-color: black; */
+ /* background-image: url(/public/Page1.webp); */
+}
+.bgimage1{
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
   image-rendering: optimizeQuality;
-  /* background-color: black; */
- /* background-image: url(/public/Page1.webp); */
+}
+.bgimage2{
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  image-rendering: optimizeQuality;
 }
 .mainstats{
   display: flex;
