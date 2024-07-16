@@ -20,7 +20,7 @@
     background-repeat: no-repeat;
     overflow: hidden;
     image-rendering: optimizeQuality;
-   background-image: url(/dist/assets/Page2-BpFJFnCk.webp);
+   background-image: url(/public/Page2.webp);
    /* background-color: black; */
 }
 .main2{
@@ -37,7 +37,7 @@
   overflow: hidden;
   image-rendering: optimizeQuality;
   /* background-color: black; */
- background-image: url(/dist/assets/Page1-BpFJFnCk.webp);
+ background-image: url(/public/Page1.webp);
 }
 .mainstats{
   display: flex;
