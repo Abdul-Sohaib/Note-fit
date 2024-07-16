@@ -154,7 +154,7 @@ function App() {
 
     return (
       
-      <motion.div className='main2 flex justify-center items-center bg-customBlack'>
+      <motion.div className='main2 flex justify-center items-center'>
         <motion.h1
           className=' flex text-9xl font-heading font-bold justify-center items-center flex-1 pt-52 text-customyellow tracking-wider md:text-7xl md:pt-36 sm:text-7xl sm:pt-36 esm:text-6xl exsm:text-5xl'
           ref={div1Ref}
