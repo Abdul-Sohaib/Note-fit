@@ -20,7 +20,7 @@
     background-repeat: no-repeat;
     overflow: hidden;
     image-rendering: optimizeQuality;
-   /* background-image: url(/public/Page2.webp); */
+   background-image: url(./images/Page2.webp);
    /* background-color: black; */
 }
 .main2{
@@ -32,20 +32,12 @@
   padding: 0;
   position: relative;
   padding-top: 10vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  image-rendering: optimizeQuality;
   /* background-color: black; */
- /* background-image: url(/public/Page1.webp); */
-}
-.bgimage1{
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  image-rendering: optimizeQuality;
-}
-.bgimage2{
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  image-rendering: optimizeQuality;
+ background-image: url(./images/Page1.webp);
 }
 .mainstats{
   display: flex;

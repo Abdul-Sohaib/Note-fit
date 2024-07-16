@@ -18,8 +18,6 @@ import Musclebuild from './Components/Musclebuild';
 import Generalhealth from './Components/Generalhealth';
 import Loose from './Components/Loose';
 import Footer from './Components/Footer';
-import img1 from './images/Page1.webp';
-import img2 from './images/Page2.webp';
 
 function App() {
   const [todo, setTodo] = useState("");
@@ -157,7 +155,6 @@ function App() {
     return (
       
       <motion.div className='main2 flex justify-center items-center'>
-        <img className='bgimage1' src={img1} alt="image1" />
         <motion.h1
           className=' flex text-9xl font-heading font-bold justify-center items-center flex-1 pt-52 text-customyellow tracking-wider md:text-7xl md:pt-36 sm:text-7xl sm:pt-36 esm:text-6xl exsm:text-5xl'
           ref={div1Ref}
@@ -251,7 +248,6 @@ function App() {
   return (
     <>
       <div className="mainback">
-        <img className='bgimage2' src={img2} alt="image2" />
         <div className="bubble red"></div>
         <div className="bubble white"></div>
         <div className="bubble yellow"></div>
