@@ -124,7 +124,7 @@ function App() {
     };
     const div5Variants = {
       hidden: { opacity: 0, y: 0 },
-      visible: { opacity: 1, y: 0, transition: { duration: 2,delay:0 } },
+      visible: { opacity: 1, y: 0, transition: { duration: 0,delay:0 } },
     };
     const div6Variants = {
       hidden: { opacity: 0, y: 50 },
@@ -133,21 +133,21 @@ function App() {
   
     const div7Variants = {
       hidden: { opacity: 0, y: 50 },
-      visible: { opacity: 1, y: 0, transition: { duration:2, delay:0.5 } },
+      visible: { opacity: 1, y: 0, transition: { duration:1.2 } },
     };
     const div8Variants = {
       hidden: { opacity: 0, x: 50 },
-      visible: { opacity: 1, x: 0, transition: { duration: 2,delay:0, type: "spring",
+      visible: { opacity: 1, x: 0, transition: { duration: 0,delay:0, type: "spring",
         bounce: 0.2} },
     };
     const div9Variants = {
       hidden: { opacity: 0, x: -50 },
-      visible: { opacity: 1, x: 0, transition: { duration: 2,delay:0, type: "spring",
+      visible: { opacity: 1, x: 0, transition: { duration: 0,delay:0, type: "spring",
         bounce: 0.2} },
     };
     const div10Variants = {
       hidden: { opacity: 0, y: 50 },
-      visible: { opacity: 1, y: 0, transition: { duration: 2,delay:0, type: "spring",
+      visible: { opacity: 1, y: 0, transition: { duration: 0,delay:0, type: "spring",
         bounce: 0.6 } },
     };
 
@@ -156,7 +156,7 @@ function App() {
       
       <motion.div className='main2 flex justify-center items-center'>
         <motion.h1
-          className=' flex text-9xl font-heading font-bold justify-center items-center flex-1 pt-52 text-customyellow tracking-wider md:text-7xl md:pt-36 sm:text-7xl sm:pt-36 esm:text-6xl exsm:text-5xl'
+          className=' flex text-9xl font-headingg  justify-center items-center flex-1 pt-44 text-customyellow tracking-wider md:text-7xl md:pt-36 sm:text-5xl sm:pt-36 esm:text-4xl exsm:text-4xl xl:text-8xl'
           ref={div1Ref}
           initial="hidden"
           animate={div1InView ? 'visible' : 'hidden'}
@@ -165,7 +165,7 @@ function App() {
           Workout Plans
         </motion.h1>
         <motion.h1
-          className=' flex text-4xl font-heading font-bold justify-center items-center flex-1 pt-16 text-customyellow tracking-wider md:pt-12 sm:pt-12 sm:pb-8 esm:text-3xl '
+          className=' flex text-5xl font-body font-extrabold justify-center items-center flex-1 pt-16 text-customyellow tracking-wider md:pt-12 sm:pt-12 sm:pb-8 esm:text-2xl md:text-4xl sm:text-3xl exsm:text-3xl'
           ref={div3Ref}
           initial="hidden"
           animate={div3InView ? 'visible' : 'hidden'}
@@ -174,25 +174,25 @@ function App() {
           Strength Training
         </motion.h1>
         <motion.div
-          className="stratergy text-center flex-row mt-5 flex mx-8 flex-1 md:flex-col gap-8 sm:flex-col sm:gap-20"
+          className="stratergy text-center flex-row mt-5 flex mx-2 flex-1 md:flex-col gap-8 sm:flex-col sm:gap-20 xl:gap-2"
           ref={div2Ref}
         initial="hidden"
         animate={div2InView ? 'visible' : 'hidden'}
         variants={div2Variants}
         >
-          <motion.div className='flex justify-center items-center pt-20 backdrop-blur-md border-zinc-50 border-4 rounded-3xl  flex-1 w-96 xl:w-72 esm:w-80' ref={div4Ref}
+          <motion.div className='flex justify-center items-center pt-20 backdrop-blur-3xl border-zinc-50 border-4 rounded-3xl  flex-1 w-96 xl:w-full esm:w-80' ref={div4Ref}
           initial="hidden"
           animate={div4InView?'visible':'hidden'}
-          variants={div4Variants} whileHover={{ scale: 1.1 }}>
+          variants={div4Variants} whileHover={{ scale: 1.1 }} transition={{duration:0.3}}>
          <Strengthbeg/>
          </motion.div>
-          <motion.div className='flex justify-center items-center pt-20 backdrop-blur-md border-zinc-50 border-4 rounded-3xl  mx-6 flex-1 esm:w-80 sm:w-96  w-96 xl:w-72' ref={div5Ref}
+          <motion.div className='flex justify-center items-center pt-20 backdrop-blur-3xl border-zinc-50 border-4 rounded-3xl  mx-6 flex-1 esm:w-80 sm:w-full  w-96 xl:w-72' ref={div5Ref}
           initial="hidden"
           animate={div5InView ? 'visible' : 'hidden'}
-          variants={div5Variants} whileHover={{ scale: 1.1 }}>
+          variants={div5Variants} whileHover={{ scale: 1.1 }}  transition={{duration:0.3}}>
          <Strengthind/>
          </motion.div>
-         <motion.div className='flex justify-center items-center pt-20 backdrop-blur-md border-zinc-50 border-4 rounded-3xl  flex-1 w-96 xl:w-72 esm:w-80' whileHover={{ scale: 1.1 }}>
+         <motion.div className='flex justify-center items-center pt-20 backdrop-blur-3xl border-zinc-50 border-4 rounded-3xl  flex-1 w-96 xl:w-full esm:w-80' whileHover={{ scale: 1.1 }}  transition={{duration:0.3}}>
           <Strengthadv/>
          </motion.div>
          
@@ -200,7 +200,7 @@ function App() {
 
         {/* Meal plans */}
         <motion.h1
-          className=' flex text-9xl font-heading font-bold justify-center items-center flex-1 pt-52 text-customyellow tracking-wide md:text-7xl sm:text-5xl xl:text-8xl esm:text-5xl exsm:text-4xl'
+          className=' flex text-8xl font-headingg  justify-center items-center flex-1 pt-52 text-customyellow tracking-wide md:text-6xl sm:text-4xl xl:text-7xl esm:text-3xl exsm:text-2xl'
           ref={div6Ref}
           initial="hidden"
           animate={div6InView ? 'visible' : 'hidden'}
@@ -209,7 +209,7 @@ function App() {
           Nutritional Guidance
         </motion.h1>
         <motion.h1
-          className=' flex text-4xl font-heading font-bold justify-center items-center flex-1 pt-16 text-customyellow tracking-wider sm:text-3xl'
+          className=' flex text-5xl font-body font-extrabold justify-center items-center flex-1 pt-16 text-customyellow tracking-wider sm:text-3xl md:text-4xl exsm:text-xl'
           ref={div7Ref}
           initial="hidden"
           animate={div7InView ? 'visible' : 'hidden'}
@@ -218,25 +218,25 @@ function App() {
           Meal Plans
         </motion.h1>
         <motion.div
-          className="stratergy text-center flex-row mt-5 mx-8 flex flex-1 md:flex-col gap-8 pb-8 sm:flex-col sm:gap-10"
+          className="stratergy text-center flex-row mt-5 mx-2 flex flex-1 md:flex-col gap-8 pb-8 sm:flex-col sm:gap-10 xl:gap-2"
         >
-          <motion.div className=' muscle flex justify-center items-center pt-10  backdrop-blur-md border-zinc-50 border-4 rounded-3xl  flex-1 bg' ref=
+          <motion.div className=' muscle flex justify-center items-center pt-10  backdrop-blur-3xl border-zinc-50 border-4 rounded-3xl  flex-1 ' ref=
           {div9Ref}
           initial="hidden"
           animate={div9InView?'visible':'hidden'}
-          variants={div9Variants} whileHover={{ scale: 1.1 }}>
+          variants={div9Variants} whileHover={{ scale: 1.1 }}  transition={{duration:0.3}}>
          <Musclebuild/>
          </motion.div>
-          <motion.div className=' loss flex justify-center items-center pt-20 backdrop-blur-md border-zinc-50 border-4 rounded-3xl  mx-6 flex-1' ref={div10Ref}
+          <motion.div className=' loss flex justify-center items-center pt-20 backdrop-blur-3xl border-zinc-50 border-4 rounded-3xl   flex-1' ref={div10Ref}
           initial="hidden"
           animate={div10InView ? 'visible' : 'hidden'}
-          variants={div10Variants} whileHover={{ scale: 1.1 }}>
+          variants={div10Variants} whileHover={{ scale: 1.1 }}  transition={{duration:0.3}}>
             <Loose/>
          </motion.div>
-         <motion.div className=' health flex justify-center items-center pt-20 backdrop-blur-md border-zinc-50 border-4 rounded-3xl  flex-1'    ref={div8Ref}
+         <motion.div className=' health flex justify-center items-center pt-20 backdrop-blur-3xl border-zinc-50 border-4 rounded-3xl  flex-1'    ref={div8Ref}
         initial="hidden"
         animate={div8InView ? 'visible' : 'hidden'}
-        variants={div8Variants} whileHover={{ scale: 1.1 }}>
+        variants={div8Variants} whileHover={{ scale: 1.1 }}  transition={{duration:0.3}}>
           <Generalhealth/>
          </motion.div>
          
@@ -252,24 +252,24 @@ function App() {
         <div className="bubble white"></div>
         <div className="bubble yellow"></div>
         <Navbar />
-        <div className="container gap-2 flex flex-1 mx-8 md:flex-col sm:flex-col">
-          <div className="left flex flex-col gap-2 p-2 backdrop-blur-md border-zinc-50 border-4 rounded-3xl sm:w-96 esm:w-80 " data-aos="fade-down-right">
+        <div className="container gap-2 flex flex-1 mx-8 md:flex-col sm:flex-col md:w-full">
+          <div className="left flex flex-col gap-2 p-2 backdrop-blur-3xl border-zinc-50 border-4 rounded-3xl sm:w-96 esm:w-80 md:w-full " data-aos="fade-down-right">
             <motion.div className='togglebtn flex mx-6'>
-              <motion.button onClick={() => toggleComponent('calories')} className='changebtn topbtn bg-white flex justify-center items-center relative p-2 text-sm font-bold' whileHover={{ scale: 1.1 }}>Calories</motion.button>
-              <motion.button onClick={() => toggleComponent('fats')} className='changebtn topbtn bg-white flex justify-center items-center relative p-2 text-sm font-bold' whileHover={{ scale: 1.1 }}>Fats</motion.button>
-              <motion.button onClick={() => toggleComponent('bmi')} className='changebtn topbtn bg-white flex justify-center items-center relative p-2 text-sm font-bold' whileHover={{ scale: 1.1 }}>Bmi</motion.button>
+              <motion.button onClick={() => toggleComponent('calories')} className='changebtn topbtn bg-white flex justify-center items-center relative p-2 text-sm font-bold font-body' whileHover={{ scale: 1.1 }}>Calories</motion.button>
+              <motion.button onClick={() => toggleComponent('fats')} className='changebtn topbtn bg-white flex justify-center items-center relative p-2 text-sm font-bold font-body' whileHover={{ scale: 1.1 }}>Fats</motion.button>
+              <motion.button onClick={() => toggleComponent('bmi')} className='changebtn topbtn bg-white flex justify-center items-center relative p-2 text-sm font-bold font-body' whileHover={{ scale: 1.1 }}>Bmi</motion.button>
             </motion.div>
             {showComponent === 'calories' && <Calories />}
             {showComponent === 'fats' && <Fats />}
             {showComponent === 'bmi' && <Bmiorg />}
           </div>
-          <div className="right backdrop-blur-md border-zinc-50 border-4 rounded-3xl flex-col sm:w-96 esm:w-80" data-aos="fade-up-left">
+          <div className="right backdrop-blur-3xl border-zinc-50 border-4 rounded-3xl flex-col sm:w-96 esm:w-80 md:w-full" data-aos="fade-up-left">
             <div className='flex flex-row justify-center items-center relative sm:w-auto'>
             <input
               onChange={handleChange}
               value={todo}
               type='text'
-              className="inputer rounded-3xl border-0 font-bold sm:mx-1 sm:w-80"
+              className="inputer rounded-3xl border-0 font-bold sm:mx-1 sm:w-80 md:w-full"
               placeholder=' Enter your Fitness note...'
             >
             </input>
@@ -279,7 +279,7 @@ function App() {
               className='btn btn1 underline font-extrabold sm:text-sm items-center justify-center focus:ring-2 focus:ring-inset absolute sm:right-14 xl:right-16 md:right-16 esm:right-8 exsm:right-9'
               id='inputbtn'
             >
-              <span className='flex w-24'>More!</span><span className='flex w-24'>Add</span>
+              <span className='flex w-24 font-body'>More!</span><span className='flex w-24'>Add</span>
             </button>
             </div>
             {todos.length > 0 && (
@@ -290,15 +290,15 @@ function App() {
             <div className='flex justify-center items-center'>
             <button style={{ display: todos.length === 0 ? 'none' : 'block' }}
               onClick={handleFinished}
-              className='finishbtn bg-white flex justify-center items-center relative p-2 py-1 text-sm font-bold rounded-md md:max-w-24 sm:max-w-48'
+              className='finishbtn bg-white flex justify-center font-body items-center relative p-2 py-1 text-sm font-bold rounded-md md:max-w-24 sm:max-w-48'
             >
               Finished
             </button>
             </div>
-            <div className="todos flex flex-col absolute sm:w-customw">
-              {todos.length === 0 && <div><h3 className='flex font-body font-bold justify-center items-center text-yellow-300 relative my-16'>Nothing to display...</h3></div>}
+            <div className="todos flex flex-col absolute w-full sm:w-full font-body md:w-full">
+              {todos.length === 0 && <div><h3 className='flex font-headingg  justify-center items-center text-customyellow relative my-16'>Nothing to display...</h3></div>}
               {todos.map(item => {
-                return (finished || !item.isCompleted) && <div key={item.id} className="todo flex flex-row justify-between gap-4 flex-1 my-4 mx-6 sm:w-customw sm:mx-2 esm:w-72 esm:gap-4 sm:gap-2  md:gap-3">
+                return (finished || !item.isCompleted) && <div key={item.id} className="todo flex flex-row justify-between gap-4 flex-1 my-4 w-full sm:w-full  esm:w-full exsm:w-full esm:gap-4 sm:gap-2  md:gap-3 font-body md:w-full">
                   <input
                     type="checkbox"
                     checked={item.isChecked}
@@ -306,32 +306,32 @@ function App() {
                     className='flex ml-4 bg-transparent'
                     name={item.id}
                   />
-                  <div className={item.isCompleted ? " text line-through text-m font-body relative font-bold text-yellow-300" : "text  text-m font-body relative font-bold text-yellow-300"}>
+                  <div className={item.isCompleted ? " text line-through text-m font-body relative font-bold text-customBlack" : "text  text-m font-body relative font-extrabold text-customyellow"}>
                     {item.todo}
                   </div>
                   <div className="buttons flex flex-row gap-0">
                     {item.isChecked ? (
-                      <div className='flex justify-between items-center gap-2 flex-1 flex-col mx-10'>
+                      <div className='flex justify-between items-center gap-2 flex-1 flex-col mx-4 '>
                       <button
                         onClick={() => handleDelete(item.id)}
-                        className='deletebtn bg-white flex justify-center items-center p-2 py-1 text-sm font-bold rounded-md md:max-w-12'
+                        className='deletebtn bg-white flex justify-center items-center p-2 py-1 text-sm font-bold rounded-md md:w-auto font-body'
                       >
                         Delete
                       </button>
                       </div>
                     ) : (
                       <>
-                      <div className='flex flex-1 flex-row justify-center items-center mx-8'>
+                      <div className='flex flex-1 flex-row justify-center items-center mx-4'>
                         <button
                           onClick={(e) => handleEdit(e, item.id)}
-                          className='editbtn bg-white flex justify-center items-center relative p-2 py-1 text-sm font-bold rounded-md sm:max-w-20'
+                          className='editbtn bg-white w-auto flex justify-center items-center relative p-2 py-1 text-sm font-bold rounded-md sm:w-auto font-body'
                         >
                           Edit
                         </button>
                         <button
                           onClick={editId ? handleSave : handleAdd}
                           disabled={!todo}
-                          className='savebtn bg-white flex justify-center items-center relative p-2 py-1 text-sm font-bold rounded-md sm:max-w-20'
+                          className='savebtn bg-white w-auto flex justify-center items-center relative p-2 py-1 text-sm font-bold rounded-md sm:w-auto font-body'
                         >
                           Save
                         </button>
@@ -346,7 +346,7 @@ function App() {
         </div>
       </div>
       <ScrollAnimationComponent />
-      <footer className='flex justify-center items-center bg-customBlack h-96 md:h-auto sm:h-auto'>
+      <footer className='flex justify-center items-center bg-customgray h-96 md:h-auto sm:h-auto w-full'>
        <Footer/>
       </footer>
      

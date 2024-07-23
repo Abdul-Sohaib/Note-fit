@@ -9,15 +9,17 @@ export default {
       colors: {
         customBlue: '#4A90E2',
         customGreen: '#7ED321',
-        customOrange: '#F5A623',
+        customOrange: '#FF4500',
         customBlack:'#0A0809',
         customred:'#FF1500',
-        customyellow:'#FBDE46',
+        customyellow:'#FFA500',
+        customgray:'#2B2B2B',
         customgradient: 'linear-gradient(90deg, #4A90E2, #7ED321, #F5A623)',
       },
       fontFamily:{
-        heading: ['Bebas Neue', 'sans-serif'],
+        headingg: ['Black Ops One', 'system-ui'],
         body: ['Roboto', 'sans-serif'],
+        head: ['Caveat'],
       },
       screens:{
         md:{'max':'770px','min': '460px'},

@@ -58,24 +58,26 @@ const Fats = () => {
         delay: 0,
         ease: [0, 0.71, 0.2, 1.01]
       }}>
-        <div className='flex justify-center items-center w-96'>
-                <h2 className='flex text-xl font-body font-bold justify-center items-center right-16 text-yellow-300 relative pl-40 my-10 underline'>Fats-calculator</h2>
+        <div className='flex justify-center self-center w-full'>
+                <h2 className='flex text-2xl font-headingg justify-center items-center  text-customyellow relative  my-10 underline'>Fats-calculator</h2>
                 </div>
-                <div className='calories-content flex flex-col esm:w-72 '>
-                    <form onSubmit={handleSubmit}>
+                <div className='calories-content flex flex-col esm:w-72 mx-8 '>
+                    <form onSubmit={handleSubmit} className='flex flex-col justify-center self-center gap-3'>
                     <div className='flex justify-center items-center'>
-    <button className='caloriestbtn bg-white flex justify-center items-center relative p-2 py-1 text-sm font-bold rounded-md'>Submit</button>
+    <button className='caloriestbtn bg-white flex justify-center items-center relative p-2 py-1 text-sm font-extrabold rounded-md font-body'>Submit</button>
     </div>
-                    {fatBurn !== null && <div className=' flex text-lg font-body font-bold justify-center items-center mx-4 text-red-500 relative'>Your estimated calorie burned: {fatBurn.toFixed(2)} kcal</div>}
-                        <h2 className='flex text-xl font-body font-bold justify-center items-center right-16 text-yellow-300 relative pl-40 underline esm:text-sm'>Select Weight</h2>
-                        <div className='flex flex-row gap-4 items-center justify-center my-7'>
+                    {fatBurn !== null && <div className=' flex text-lg font-body font-extrabold justify-center items-center mx-4 text-customBlack relative'>Your estimated calorie burned: {fatBurn.toFixed(2)} kcal</div>}
+                    {/* weight */}
+                    <motion.div className='box backdrop-blur-3xl border-zinc-50 border-2 rounded-3xl mx-4' whileHover={{scale: 1.1 }} transition={{duration:0.3}}>
+                        <h2 className='flex text-xl font-body font-bold justify-center items-center  text-customyellow relative esm:text-sm'>Select Weight</h2>
+                        <div className='flex flex-row  items-center justify-center my-7'>
                             <div>
-                                <label className='text-black text-lg font-body font-bold'>
-                                    <h3 className='text-yellow-300 text-lg font-body font-bold flex gap-2'>Weight:
-                                        <select className='bg-black rounded-md border-yellow-300 border-2' value={weight} onChange={handleWeightChange}>
-                                            <option className='text-customBlue' value="" disabled>Select your weight</option>
+                                <label className=' text-lg font-body font-bold'>
+                                    <h3 className='text-customyellow text-lg font-body font-extrabold flex gap-2'>Weight:
+                                        <select className='bg-transparent rounded-md border-yellow-300 border-2' value={weight} onChange={handleWeightChange}>
+                                            <option className='text-customred bg-customBlack' value="" disabled>Select your weight</option>
                                             {[...Array(201).keys()].map((num) => (
-                                                <option className='text-customBlue' key={num + 30} value={num + 30}>
+                                                <option className='text-customred bg-customBlack' key={num + 30} value={num + 30}>
                                                     {num + 30} kg
                                                 </option>
                                             ))}
@@ -84,24 +86,27 @@ const Fats = () => {
                                 </label>
                             </div>
                         </div>
-                        <h2 className='flex text-xl font-body font-bold justify-center items-center right-16 text-yellow-300 relative pl-40 underline esm:text-sm'>Select Duration</h2>
-                        <label className='text-black text-lg font-body font-bold gap-4 flex justify-center items-center mx-8'>
-                            <div className='flex flex-row gap-4 items-center justify-center my-7'>
-                                <h3 className='text-yellow-300 text-lg font-body font-bold'>Hours:
-                                    <select className='bg-black rounded-md border-yellow-300 border-2' value={hours} onChange={handleHoursChange}>
-                                        <option className='text-customBlue' value="" disabled>Select hours</option>
+                        </motion.div>
+                        {/* duration */}
+                        <motion.div className='box backdrop-blur-3xl border-zinc-50 border-2 rounded-3xl mx-4' whileHover={{scale: 1.1 }} transition={{duration:0.3}}>
+                        <h2 className='flex text-xl font-body font-extrabold justify-center items-center  text-customyellow relative esm:text-sm'>Select Duration</h2>
+                        <label className=' text-lg font-body font-extrabold flex justify-center items-center mx-8'>
+                            <div className='flex flex-row  items-center justify-center my-7 gap-2'>
+                                <h3 className='text-customyellow text-lg font-body font-extrabold'>Hours:
+                                    <select className='bg-transparent rounded-md border-yellow-300 border-2' value={hours} onChange={handleHoursChange}>
+                                        <option className='text-customred bg-customBlack' value="" disabled>Select hours</option>
                                         {[...Array(24).keys()].map((num) => (
-                                            <option className='text-customBlue' key={num} value={num}>
+                                            <option className='text-customred bg-customBlack' key={num} value={num}>
                                                 {num} hours
                                             </option>
                                         ))}
                                     </select>
                                 </h3>
-                                <h3 className='text-yellow-300 text-lg font-body font-bold'>Minutes:
-                                    <select className='bg-black rounded-md border-yellow-300 border-2' value={minutes} name="duration" onChange={handleMinutesChange}>
-                                        <option className='text-customBlue' value="" disabled>Select minutes</option>
+                                <h3 className='text-customyellow text-lg font-body font-extrabold'>Minutes:
+                                    <select className='bg-transparent rounded-md border-yellow-300 border-2' value={minutes} name="duration" onChange={handleMinutesChange}>
+                                        <option className='text-customred bg-customBlack' value="" disabled>Select minutes</option>
                                         {[...Array(60).keys()].map((num) => (
-                                            <option className='text-customBlue' key={num + 1} value={num + 1}>
+                                            <option className='text-customred bg-customBlack' key={num + 1} value={num + 1}>
                                                 {num + 1}
                                             </option>
                                         ))}
@@ -109,22 +114,28 @@ const Fats = () => {
                                 </h3>
                             </div>
                         </label>
-                        <h2 className='flex text-xl font-body font-bold justify-center items-center right-16 text-yellow-300 relative pl-40 underline esm:text-sm'>Select Exercise-Type</h2>
-                        <div className='flex flex-row gap-4 items-center justify-center my-7'>
-                            <label className='text-black text-lg font-body font-bold'>
-                                <h3 className='text-yellow-300 text-lg font-body font-bold flex gap-2'>Exercise Type:
-                                    <select className='bg-black rounded-md border-yellow-300 border-2' value={exerciseType} onChange={handleExerciseTypeChange}>
-                                        <option className='text-customBlue' value="" disabled>Select exercise type</option>
-                                        <option className='text-customBlue' value="Normal">Normal</option>
-                                        <option className='text-customBlue' value="Intermediate">Intermediate</option>
-                                        <option className='text-customBlue' value="Extensive">Extensive</option>
+                        </motion.div>
+                        {/* exerciseType */}
+                        <motion.div className='box backdrop-blur-3xl border-zinc-50 border-2 rounded-3xl mx-4' whileHover={{scale: 1.1 }} transition={{duration:0.3}}>
+                        <h2 className='flex text-xl font-body font-extrabold justify-center items-center  text-customyellow relative esm:text-sm'>Select Exercise-Type</h2>
+                        <div className='flex flex-row items-center justify-center my-7'>
+                            <label className=' text-lg font-body font-extrabold'>
+                                <h3 className='text-customyellow text-lg font-body font-extrabold flex gap-2'>Exercise Type:
+                                    <select className='bg-transparent rounded-md border-yellow-300 border-2' value={exerciseType} onChange={handleExerciseTypeChange}>
+                                        <option className='text-customred bg-customBlack' value="" disabled>Select exercise type</option>
+                                        <option className='text-customred bg-customBlack' value="Normal">Normal</option>
+                                        <option className='text-customred bg-customBlack' value="Intermediate">Intermediate</option>
+                                        <option className='text-customred bg-customBlack' value="Extensive">Extensive</option>
                                     </select>
                                 </h3>
                             </label>
                         </div>
+                        </motion.div>
                     </form>
+                    
                         
                     </div>
+                    
             </motion.div>
         </>
     );

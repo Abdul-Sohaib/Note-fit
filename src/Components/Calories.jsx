@@ -44,19 +44,21 @@ return (
         delay: 0,
         ease: [0, 0.71, 0.2, 1.01]
       }}>
-   <div className='flex justify-center items-center w-96'>
-    <h2 className='flex text-xl font-body font-bold justify-center items-center right-16 text-customyellow relative pl-40 my-10 underline'>Calories-Calculator</h2>
+   <div className='flex justify-center items-center w-full'>
+    <h2 className='flex text-2xl font-headingg  justify-center self-center text-customyellow relative  my-10 underline'>Calories-Calculator</h2>
     </div>
-    <div className='calories-content flex flex-col '>
-    <form onSubmit={handleSubmit}>
+    <div className='calories-content flex flex-col mx-20 '>
+    <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center gap-3 '>
       <div className='flex justify-center items-center'>
-    <button className='caloriestbtn bg-white flex justify-center items-center relative p-2 py-1 text-sm font-bold rounded-md'>Submit</button>
+    <button className='caloriestbtn bg-white flex justify-center items-center relative p-2 py-1 text-sm font-bold rounded-md font-body'>Submit</button>
     </div>
-    {calories && <div className='flex text-lg font-body font-bold justify-center items-center text-red-500 relative mx-1 my-3 '>Your estimated daily calorie needs: {calories.toFixed(2)} kcal</div>}
-        <h3 className='flex text-xl font-body font-bold justify-center items-center right-16 text-customyellow relative pl-40 underline esm:text-sm'>Select your gender</h3>
-        <div className='flex flex-row gap-4 items-center justify-center my-7'>
+    {calories && <div className='flex text-lg font-body font-extrabold justify-center items-center text-customBlack relative mx-1 my-3 '>Your estimated daily calorie needs: {calories.toFixed(2)} kcal</div>}
+    <motion.div className='backdrop-blur-3xl border-zinc-50 border-2 rounded-3xl box '
+      whileHover={{scale: 1.1 }} transition={{duration:0.3}}>
+        <h3 className='flex text-xl font-body font-extrabold justify-center items-center text-customyellow relative esm:text-sm'>Select your gender</h3>
+        <div className=' flex flex-row gap-4 items-center justify-center my-7'>
         <div>
-        <label className='text-yellow-300 text-lg font-body font-bold'>
+        <label className='text-customyellow text-lg font-body font-extrabold'>
           <input
             type="radio"
             value="Male"
@@ -67,7 +69,7 @@ return (
         </label>
         </div>
         <div>
-        <label className='text-yellow-300 text-lg font-body font-bold'>
+        <label className='text-customyellow text-lg font-body font-extrabold'>
           <input
             type="radio"
             value="Female"
@@ -78,17 +80,19 @@ return (
         </label>
         </div>
         </div>
+        </motion.div>
      
 {/* age change code */}
-      <h3 className='flex text-xl font-body font-bold justify-center items-center right-16 text-customyellow relative pl-40 underline esm:text-sm'>Select your Age</h3>
-      <div className='flex flex-row gap-4 items-center justify-center my-7'>
+<motion.div className='box backdrop-blur-3xl border-zinc-50 border-2 rounded-3xl mx-4' whileHover={{scale: 1.1 }} transition={{duration:0.3}}>
+      <h3 className='flex text-xl font-body font-extrabold justify-center items-center  text-customyellow relative   esm:text-sm'>Select your Age</h3>
+      <div className=' flex flex-row gap-4 items-center justify-center my-7'>
       <div>
-        <label className='text-black text-lg font-body font-bold'>
-          <h3 className='text-yellow-300 text-lg font-body font-bold flex gap-2'>Age:
-          <select className='bg-black rounded-md border-yellow-300 border-2' value={age} onChange={handleageChange}>
-            <option className='text-customBlue' value="" disabled ><h3 >Select your age</h3></option>
+        <label className=' text-lg font-body font-extrabold'>
+          <h3 className='text-customyellow text-lg font-body font-extrabold flex gap-2'>Age:
+          <select className='bg-transparent rounded-md border-yellow-300 border-2' value={age} onChange={handleageChange}>
+            <option className='text-customred bg-customBlack' value="" disabled ><h3 >Select your age</h3></option>
             {[...Array(100).keys()].map((num) => (
-              <option className='text-customBlue' key={num + 1} value={num + 1}>
+              <option className='text-customred bg-customBlack' key={num + 1} value={num + 1}>
                 {num + 1}
               </option>
             ))}
@@ -97,16 +101,18 @@ return (
         </label>
       </div>
       </div>
+      </motion.div>
     {/* height change code */}
-      <h2 className='flex text-xl font-body font-bold justify-center items-center right-16 text-customyellow relative pl-40 underline esm:text-sm'>Select Height</h2>
+    <motion.div className='box backdrop-blur-3xl border-zinc-50 border-2 rounded-3xl mx-4' whileHover={{scale: 1.1 }} transition={{duration:0.3}}>
+      <h2 className='flex text-xl font-body font-extrabold justify-center items-center  text-customyellow relative   esm:text-sm'>Select Height</h2>
       <div className='flex flex-row gap-4 items-center justify-center my-7'>
       <div>
-        <label className='text-black text-lg font-body font-bold'>
-          <h3 className='text-yellow-300 text-lg font-body font-bold flex gap-2'>Height:
-          <select className='bg-black rounded-md border-yellow-300 border-2' value={height} onChange={handleheightChange}>
-            <option className='text-customBlue' value="" disabled>Select your height</option>
+        <label className=' text-lg font-body font-extrabold'>
+          <h3 className='text-customyellow text-lg font-body font-extrabold flex gap-2'>Height:
+          <select className='bg-transparent rounded-md border-yellow-300 border-2' value={height} onChange={handleheightChange}>
+            <option className='text-customred bg-customBlack' value="" disabled>Select your height</option>
             {[...Array(151).keys()].map((num) => (
-              <option className='text-customBlue' key={num + 100} value={num + 100}>
+              <option className='text-customred bg-customBlack' key={num + 100} value={num + 100}>
                 {num + 100} cm
               </option>
             ))}
@@ -115,16 +121,18 @@ return (
         </label>
       </div>
       </div>
+      </motion.div>
  {/* weight change code */}
-      <h2 className='flex text-xl font-body font-bold justify-center items-center right-16 text-customyellow relative pl-40 underline esm:text-sm'>Select Weight</h2>
+ <motion.div className='box backdrop-blur-3xl border-zinc-50 border-2 rounded-3xl mx-4' whileHover={{scale: 1.1 }} transition={{duration:0.3}}>
+      <h2 className='flex text-xl font-body font-extrabold justify-center items-center  text-customyellow relative   esm:text-sm'>Select Weight</h2>
       <div className='flex flex-row gap-4 items-center justify-center my-7'>
       <div className='gap-4'>
-        <label className='text-black text-lg font-body gap-3 font-bold'>
-          <h3 className='text-yellow-300 text-lg  font-body font-bold flex gap-2'>Weight:
-          <select className='gap-4 bg-black rounded-md border-yellow-300 border-2' value={weight} onChange={handleweightChange}>
-            <option className='text-customBlue' value="" disabled><h3 className='text-customBlue'>Select your weight</h3></option>
+        <label className=' text-lg font-body gap-3 font-bold'>
+          <h3 className='text-customyellow text-lg  font-body font-extrabold flex gap-2'>Weight:
+          <select className='gap-4 bg-transparent rounded-md border-yellow-300 border-2' value={weight} onChange={handleweightChange}>
+            <option className='text-customred bg-customBlack' value="" disabled><h3 className='text-customBlue'>Select your weight</h3></option>
             {[...Array(201).keys()].map((num) => (
-              <option className='text-customBlue' key={num + 30} value={num + 30}>
+              <option className='text-customred bg-customBlack' key={num + 30} value={num + 30}>
                 {num + 30} kg
               </option>
             ))}
@@ -133,7 +141,7 @@ return (
         </label>
       </div>
       </div>
-    
+      </motion.div>
     </form>
     </div>
     
