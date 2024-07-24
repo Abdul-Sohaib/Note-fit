@@ -19,8 +19,6 @@
     background-repeat: no-repeat;
     overflow: hidden;
     image-rendering: optimizeQuality;
-   /* background-image: url(./Images/page10.webp); */
-   /* background-color: black; */
 }
 .main2{
   height: auto;
@@ -35,8 +33,6 @@
   background-repeat: no-repeat;
   overflow: hidden;
   image-rendering: optimizeQuality;
-  /* background-color: black; */
- /* background-image: url(./Images/page11.webp); */
 }
 .mainstats{
   display: flex;
