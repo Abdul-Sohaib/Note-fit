@@ -10,7 +10,7 @@ export default {
         customBlue: '#4A90E2',
         customGreen: '#7ED321',
         customOrange: '#FF4500',
-        customBlack:'#0A0809',
+        customBlack:'#E5E7EB',
         customred:'#FF1500',
         customyellow:'#FFA500',
         customgray:'#2B2B2B',
