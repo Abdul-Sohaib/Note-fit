@@ -308,7 +308,7 @@ function App() {
                     className='flex ml-4 bg-transparent'
                     name={item.id}
                   />
-                  <div className={item.isCompleted ? " text line-through text-m font-body relative font-bold text-customBlack" : "text  text-m font-body relative font-extrabold text-customyellow"}>
+                  <div className={item.isCompleted ? " text line-through text-m font-body relative font-bold text-customyellow" : "text  text-m font-body relative font-extrabold text-customyellow"}>
                     {item.todo}
                   </div>
                   <div className="buttons flex flex-row gap-0">
